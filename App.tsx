@@ -1,11 +1,9 @@
-
 import React, { useState } from 'react';
 import { TranslationTab } from './types';
 import { ICONS } from './constants';
 import TextTab from './components/TextTab';
 import VoiceTab from './components/VoiceTab';
 import CameraTab from './components/CameraTab';
-import ArchitectureTab from './components/ArchitectureTab';
 
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<TranslationTab>(TranslationTab.TEXT);
@@ -15,7 +13,6 @@ const App: React.FC = () => {
       case TranslationTab.TEXT: return <TextTab />;
       case TranslationTab.VOICE: return <VoiceTab />;
       case TranslationTab.CAMERA: return <CameraTab />;
-      case TranslationTab.ARCHITECTURE: return <ArchitectureTab />;
       default: return <TextTab />;
     }
   };
@@ -33,10 +30,6 @@ const App: React.FC = () => {
               Auto-Translator <span className="text-indigo-600">Pro</span>
             </h1>
           </div>
-          <div className="hidden sm:flex items-center gap-4 text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1.5 rounded-full uppercase tracking-wider">
-            <span className="flex h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
-            NLLB-200 Optimized Pipeline
-          </div>
         </div>
       </header>
 
@@ -48,7 +41,6 @@ const App: React.FC = () => {
               { id: TranslationTab.TEXT, label: 'Text', icon: <ICONS.Text /> },
               { id: TranslationTab.VOICE, label: 'Voice', icon: <ICONS.Mic /> },
               { id: TranslationTab.CAMERA, label: 'Camera', icon: <ICONS.Camera /> },
-              { id: TranslationTab.ARCHITECTURE, label: 'Architecture', icon: <ICONS.Settings /> },
             ].map((tab) => (
               <button
                 key={tab.id}

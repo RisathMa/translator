@@ -2,8 +2,7 @@
 export enum TranslationTab {
   TEXT = 'text',
   VOICE = 'voice',
-  CAMERA = 'camera',
-  ARCHITECTURE = 'architecture'
+  CAMERA = 'camera'
 }
 
 export interface LanguageMap {
