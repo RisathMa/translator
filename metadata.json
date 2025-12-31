@@ -1,0 +1,8 @@
+{
+  "name": "Auto-Translator Pro",
+  "description": "A world-class multimodal translation suite optimized for zero-cost deployment, featuring high-fidelity text, real-time voice, and camera-based OCR translation powered by the latest Gemini models.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
